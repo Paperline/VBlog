@@ -62,7 +62,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                     }
                 }).loginProcessingUrl("/login")
                 .usernameParameter("username").passwordParameter("password").permitAll()
-                .and().logout().permitAll().and().csrf().disable().exceptionHandling().accessDeniedHandler(getAccessDeniedHandler());
+                .and().logout().permitAll()
+                .and().csrf().disable().exceptionHandling().accessDeniedHandler(getAccessDeniedHandler());
     }
 
     @Override
